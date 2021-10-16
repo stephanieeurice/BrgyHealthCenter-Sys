@@ -1,0 +1,33 @@
+Sa registration naman ng doctor:
+ Name: 
+Address: 
+Birthday:
+Gender:
+Specialization: ( Pediatrician, Obstetrician/Gynecologist (OB/GYN), Cardiologist, Dentist, Ophthalmologist) 
+Contact No:
+Email:
+ 
+
+Patient & Admin
+Name: 
+Address: 
+Birthday:
+Gender
+Contact No:
+Email:
+
+
+admin dboard 
+- View All Appointments
+- View All Doctor Registration (then accept or reject)
+
+doctor
+- view all appointments
+
+patient dboard
+- create appointment
+- view appointments made
+
+appointment
+- https://www.jotform.com/build/212536451210443
+- Bali yung binago ko lang dyan inalis ko yung "Have you previously attended our facility*" then yung text box nandon parin ginawa ko lang "State your condition chcuhu".

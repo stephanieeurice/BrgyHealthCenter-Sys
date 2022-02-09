@@ -34,7 +34,7 @@
           <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px; ">
               <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item" style="margin-top:20px">
-                    <a href="#" class="nav-link" style="color: #308aba">
+                    <a href="#" class="nav-link" style="color: #23467a; font-weight:500;">
                         <img src="assets/icons/dashboard.png" height="20px">  Dashboard
                     </a>
                 </li>

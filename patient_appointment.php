@@ -38,7 +38,7 @@
                     </a>
                 </li>
                 <li class="nav-item" style="margin-top:10px">
-                    <a href="#" class="nav-link " style="color: #308aba">
+                    <a href="#" class="nav-link " style="color: #23467a; font-weight: 500;">
                         <img src="assets/icons/apt.png" height="20px">  Set Appointment
                     </a>
                 </li>
@@ -51,7 +51,7 @@
         
           <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px">Set an Appointment</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Set an Appointment</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Set a new doctor's appointment</p>
           </div>
@@ -61,23 +61,23 @@
                   <div class="row g-3" style="margin-top: 5px">
 
                       <div class="col-3">
-                        <label for="patient_id" class="form-label">Patient ID</label>
+                        <label for="patient_id" style="font-weight: 500;" class="form-label">Patient ID</label>
                         <input type="text" class="form-control" id="patient_id" name="patient_id" value='<?php echo $id = $_SESSION["userid"]; ?>' required readonly>
                       </div>
 
                       <div class="col-9">
-                        <label for="state_condition" class="form-label">State your condition</label>
+                        <label for="state_condition" style="font-weight: 500;" class="form-label">State your condition</label>
                         <textarea class="form-control" name="state_condition" id="state_condition" style="resize:none; height:20px" required></textarea>
                       </div>
 
                       <div class="col-6">
-                        <label for="apt_date" class="form-label">Appointment Date</label>
+                        <label for="apt_date" style="font-weight: 500;" class="form-label">Appointment Date</label>
                         <input type="date" class="form-control" id="apt_date" name="apt_date" min="" required >
                       </div>
 
                       <div class="col-6">
-                        <label for="apt_time" class="form-label">Appointment Time</label>
-                        <input type="time" class="form-control" id="apt_time" name="apt_time" required>
+                        <label for="apt_time" style="font-weight: 500;" class="form-label">Appointment Time</label>
+                        <input type="time" class="form-control" id="apt_time" name="apt_time" required >
                       </div>
 
                       <hr class="my-4">
@@ -88,7 +88,8 @@
                           </div>
 
                           <div style="display: flex; justify-content:right; align-items: right">
-                            <button class=" btn btn-primary btn-lg" type="submit" name="submit" style="width: 200px">Submit</button>
+                            <button type="submit" name="submit" style="border: none; border-radius: 0.5rem; width: 120px; background-color:#23467a; color: #fff; font-size: 18px; " >Submit</button>
+                            </button>
                           </div>
                       </div>
 

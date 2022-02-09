@@ -19,6 +19,7 @@
     <link href="assets/custom/sidebars.css" rel="stylesheet">
     <link href="assets/custom/alert.css" rel="stylesheet">
     <link href="assets/custom/alert2.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awFesome/4.7.0/css/font-awesome.min.css">
     <title>Patient Dashboard</title>
 
     <style>
@@ -51,7 +52,7 @@
           <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px; ">
               <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item" style="margin-top:20px">
-                    <a href="#" class="nav-link" style="color: #308aba">
+                    <a href="#" class="nav-link" style="color: #23467a; font-weight: 500;">
                         <img src="assets/icons/dashboard.png" height="20px">  Dashboard
                     </a>
                 </li>
@@ -69,7 +70,7 @@
         
           <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px">Appointments</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a; ">Appointments</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Track your appointments</p>
           </div>
@@ -100,6 +101,15 @@
                 <?php } ?>
               </tbody>
             </table>
+          </div>
+
+
+          <div style="text-align: right; margin-top: 100px;">
+            <a href="patient_appointment.php">
+            <button style="height: 40px; border: none; border-radius: 0.5rem; width: 190px; background-color:#23467a; color: #fff " >
+            <i class="fa-regular fa-circle-plus"></i><span>Set an appointment</span>
+            </button>
+            </a>
           </div>
 
         </div>

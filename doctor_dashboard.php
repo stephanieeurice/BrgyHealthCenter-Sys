@@ -14,6 +14,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/custom/dashboard.css" rel="stylesheet">
     <link href="assets/custom/sidebars.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--sweetalert cdn-->
     <title>Doctor Dashboard</title>
 
     <style>
@@ -62,6 +63,7 @@
                   <th scope="col">State Condition</th>
                   <th scope="col">Appointment Date</th>
                   <th scope="col">Appointment Time</th>
+                  <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -73,6 +75,9 @@
                       <td><?php echo $row['state_condition']; ?></td>
                       <td><?php echo $row['apt_date']; ?></td>
                       <td><?php echo $row['apt_time']; ?></td>
+                      <td>
+                        <div class="btn btn-primary" id="actionButton" uid="<?php echo $row['id'] ?>">Action</div>
+                      </td>
                     </tr>
                 <?php } ?>
               </tbody>
@@ -85,7 +90,35 @@
   </body>
 
   <script>
+    const clickAction = (e) => {
+    const buttonUID = e.target.getAttribute('uid')
+    Swal.fire({
+      title: 'Appointment Approval',
+      text: 'Accept, Decline or Delete Appointment.',
+      confirmButtonText: 'Cancel',
+      html: `
+        <form id="approvalForm" action="includes/appointmentaction.php" method="post">
+          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <select name="action" id="action" class='btn btn-info m-3' required>
+              <option value="" selected disabled hidden>Choose Action</option>
+              <option value="Accepted">Accept</option>
+              <option value="Declined">Decline</option>
+              <option value="Deleted">Delete</option>
+            </select>
+            <textarea class='form-control' name="remarks" rows="4" cols="50" placeholder='Remarks/Comments' maxlength=99></textarea>
+            <input type="text" value='${buttonUID}' name='id' hidden>
+            <input type="text" value='${new Date()}' name='actionDate' hidden >
+            <input type="submit" name='submit' value='Submit' class='btn btn-primary m-3' >
+          </div>
+        </form>
+      `
+      })
+    }
 
+    const actionButtons = document.querySelectorAll('#actionButton')
+    actionButtons.forEach((e) => {
+      e.addEventListener('click', clickAction)
+    })
   </script>
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>

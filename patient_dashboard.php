@@ -19,6 +19,7 @@
     <link href="assets/custom/sidebars.css" rel="stylesheet">
     <link href="assets/custom/alert.css" rel="stylesheet">
     <link href="assets/custom/alert2.css" rel="stylesheet">
+    <link href="assets/custom/main_style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awFesome/4.7.0/css/font-awesome.min.css">
     <title>Patient Dashboard</title>
 
@@ -49,20 +50,26 @@
 
       <!-- Sidebar -->
       
-          <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px; ">
-              <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item" style="margin-top:20px">
-                    <a href="#" class="nav-link" style="color: #23467a; font-weight: 500;">
-                        <img src="assets/icons/dashboard.png" height="20px">  Dashboard
-                    </a>
-                </li>
-                <li class="nav-item" style="margin-top:10px">
-                    <a href="patient_appointment.php" class="nav-link " style="color: black">
-                        <img src="assets/icons/apt.png" height="20px">  Set Appointment
-                    </a>
-                </li>
-              </ul>
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px;">
+        <div class="user_sb">
+          <img id="avatar" src="assets/images/avatar.png" alt="User Avatar" height="70" width="70">
+          <div class="user_details_sb" >
+            <strong><?php echo $name = $_SESSION["usernm"]; ?></strong>
           </div>
+        </div>        
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item" style="margin-top:20px">
+              <a href="#" class="nav-link" style="color: #23467a; font-weight: 500;">
+                  <img src="assets/icons/dashboard.png" height="20px">  Dashboard
+              </a>
+          </li>
+          <li class="nav-item" style="margin-top:10px">
+              <a href="patient_appointment.php" class="nav-link " style="color: black">
+                  <img src="assets/icons/apt.png" height="20px">  Set Appointment
+              </a>
+          </li>
+        </ul>
+      </div>
 
         <div class="b-example-divider" style="width: 25px"></div>
 

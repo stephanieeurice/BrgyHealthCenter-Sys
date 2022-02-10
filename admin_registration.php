@@ -84,20 +84,20 @@
 
     <main>
 
-          <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px; ">
-              <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item" style="margin-top:20px">
-                    <a href="admin_dashboard.php" class="nav-link" style="color: black">
-                        <img src="assets/icons/dashboard.png" height="20px">  Dashboard
-                    </a>
-                </li>
-                <li class="nav-item" style="margin-top:10px">
-                    <a href="#" class="nav-link " style="color: #308aba">
-                        <img src="assets/icons/accounts.png" height="20px">  Manage Accounts
-                    </a>
-                </li>
-              </ul>
-          </div>
+      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px; ">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item" style="margin-top:20px">
+              <a href="admin_dashboard.php" class="nav-link" style="color: black">
+                  <img src="assets/icons/dashboard.png" height="20px">  Dashboard
+              </a>
+          </li>
+          <li class="nav-item" style="margin-top:10px">
+              <a href="#" class="nav-link " style="color: #23467a; font-weight: 500;">
+                  <img src="assets/icons/accounts.png" height="20px">  Manage Accounts
+              </a>
+          </li>
+        </ul>
+      </div>
 
         <div class="b-example-divider" style="width: 25px"></div>
 
@@ -105,7 +105,7 @@
         
           <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px">Registration</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Registration</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Manage pending doctors accounts</p>
           </div>

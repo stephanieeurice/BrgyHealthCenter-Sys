@@ -34,7 +34,7 @@
           <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px; ">
               <ul class="nav nav-pills flex-column mb-auto">
                 <li class="nav-item" style="margin-top:20px">
-                    <a href="#" class="nav-link" style="color: #308aba">
+                    <a href="#" class="nav-link" style="color: #23467a; font-weight: 500;">
                         <img src="assets/icons/dashboard.png" height="20px">  Dashboard
                     </a>
                 </li>
@@ -52,7 +52,7 @@
         
           <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px">Appointments</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Appointments</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Track all patients appointments</p>
           </div>

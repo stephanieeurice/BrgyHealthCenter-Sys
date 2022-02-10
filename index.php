@@ -49,7 +49,29 @@
       </div>
       
       <div class="second-div">
-
+        <div class="second-div-parent">
+          <div class="second-div-child">
+            <h3>Create Account</h3>
+            Register now and schedule your first consultation. <br>
+            <a href="register.php"><button>Register</button></a>
+          </div>
+          <div class="second-div-child">
+            <h3>Login</h3>
+            Enter your email, password and classify what <br> type of user you are. <br>
+            <a href="login.php"><button>Login</button></a>
+          </div>
+          <div class="second-div-child">
+            <h3>FAQ's</h3>
+            <ul class="faqs">
+              <li><a href="faqs.php">How to set an appointment?</a></li>
+              <li><a href="faqs.php">Pending appointment?</a></li>
+              <li><a href="faqs.php">How to chat my doctor?</a></li>
+              <li><a href="faqs.php">How to have a video call with my doctor?</a></li>
+              <li><a href="faqs.php">Where to find my doctor's prescription?</a></li>
+              <li><a href="faqs.php">Other FAQ's</a></li>
+            </ul>
+          </div>
+        </div>  
       </div>
 
       <footer class="footer">

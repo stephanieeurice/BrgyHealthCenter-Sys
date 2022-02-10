@@ -58,7 +58,10 @@ CREATE TABLE `appointment` (
   `date_submitted` datetime NOT NULL DEFAULT current_timestamp(),
   `state_condition` text NOT NULL,
   `apt_date` date NOT NULL,
-  `apt_time` varchar(100) NOT NULL
+  `apt_time` varchar(100) NOT NULL,
+  `apt_action` varchar(100),
+  `action_date` varchar(100),
+  `action_remarks` varchar(100)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

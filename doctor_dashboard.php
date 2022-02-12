@@ -3,7 +3,7 @@
   include 'includes/db.inc.php';
 
   //Select specific datas for viewing of table, inner join for fetching data from foreign key
-  $results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.state_condition, apt.apt_date, apt.apt_time FROM appointment apt INNER JOIN patient pt ON apt.patient_id = pt.id");
+  $results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.state_condition, apt.apt_date, apt.apt_time, apt.apt_action FROM appointment apt INNER JOIN patient pt ON apt.patient_id = pt.id");
 ?>
 
 <html lang="en">
@@ -63,6 +63,7 @@
                   <th scope="col">State Condition</th>
                   <th scope="col">Appointment Date</th>
                   <th scope="col">Appointment Time</th>
+                  <th scope="col">Status</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
@@ -75,6 +76,7 @@
                       <td><?php echo $row['state_condition']; ?></td>
                       <td><?php echo $row['apt_date']; ?></td>
                       <td><?php echo $row['apt_time']; ?></td>
+                      <td><?php if ($row['apt_action']) echo $row['apt_action'] ?></td>
                       <td>
                         <div class="btn btn-primary" id="actionButton" uid="<?php echo $row['id'] ?>">Action</div>
                       </td>

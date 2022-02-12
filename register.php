@@ -9,8 +9,7 @@
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/custom/login.css" rel="stylesheet">
     <link href="assets/custom/heroes.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="assets/css/brands.css" rel="stylesheet">
 
     <style>
 
@@ -85,7 +84,7 @@
                 <div class="app-buttons-reg"  >
                   Or register with:
                   <div style="padding-top: 5px;">
-                  <button class="facebook" style="padding: 0 20px 0 5px; margin-right: 5px; width: 140px;"><i class="fa fa-facebook-square" style="margin: 10px"></i><span>Facebook</span></button>
+                  <button class="facebook" style="padding: 0 20px 0 5px; margin-right: 5px; width: 140px;"><span class="fa-brands fa-facebook" style="margin: 10px"></span><span>Facebook</span></button>
                   <button class="google" style="padding: 0 20px 0 0; width: 140px; height: 42px;"><img src="assets/icons/google.png" alt="Google logo" width="17px" style="margin: 0 10px 3px 0"><span>Google</span></button>
 
                   </div>

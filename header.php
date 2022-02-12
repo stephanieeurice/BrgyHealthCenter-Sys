@@ -3,12 +3,10 @@
 ?>
 
 
-  <header class="p-3 border-bottom" style="display: flex; background-color: #23467a; padding: 10px 5%; color: #ffffff;">
-    <div style="display: flex; flex: 1; cursor: pointer;font-size: 16px; margin: 0 20px 0 20px;">
-      <a href="patient_dashboard.php">     
-        <img src="assets/logo/temp.png" alt="Website logo" height="55" style="margin-bottom: 6px; padding-right: 0">
-      </a>
-      <div style="margin-top: 5px; text-align: left; font-size: 16px; font-weight: 500;">
+  <header class="" style="display: flex; background-color: #23467a; padding: 10px 25px; color: #ffffff;">
+    <div style="display: flex; flex: 1; cursor: pointer;font-size: 16px; margin: 0 20px 0 0;">
+      <img src="assets/logo/temp.png" alt="Website logo" height="55" style="margin-bottom: 6px; padding-right: 0">
+      <div class="app-name">
         <span>Online Health</span><br>
         <span>Consultation Portal</span>
       </div> 
@@ -22,7 +20,7 @@
         <li><a class="dropdown-item" href="#">Settings</a></li>
         <li><a class="dropdown-item" href="#">Profile</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li  style="color:#23467a;"><a class="dropdown-item" href="login.php?logout">Sign out</a></li>
+        <li><a class="dropdown-item" href="login.php?logout">Logout</a></li>
       </ul>
     </div>
 

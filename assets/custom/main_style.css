@@ -1,6 +1,70 @@
-#avatar {
-    margin: 15px;
+@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Red+Hat+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.user_sn {
+    background-image: linear-gradient(145deg, #23467a , #36a7e3); 
+    background-size: 100%; 
+    background-repeat: no-repeat; 
 }
-.user_details_sb {
-    color: #23467a;
+.user_details_sn {
+    margin: 5px 0 0 10px;
+    font-weight: 500; 
+}
+.app-name {
+    font-family: "Lexend", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+    color: #ffffff; 
+}
+.nav li {
+    padding: 0 20px 0 20px;
+}
+.nav li a {
+    font-size: 18px;
+}
+
+.nav_item {
+    line-height: 40px;
+    font-size: 16px;
+}
+.nav_item i {
+    margin-right: 10px;
+    font-size: 19px;
+}
+.logout {    
+    background-color: #36a7e3;
+    align-self: flex-end;
+    width: 120px;
+    text-align: center;
+    margin: 30px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+}
+.logout a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.logout:hover {
+    background-image: linear-gradient(145deg, #2f5da3 , #36a7e3); 
+    transition: 0.5s;
+}
+.active {
+    background-color: #ffffff;
+}
+
+
+/* User profile */
+.user-details { 
+    margin-left: 40px;
+}
+.required {
+    margin-left: 5px;
+    color: red;
+}
+.user-details label {
+    font-weight: bold;
+}
+.user-details ::placeholder {
+    color: black;
 }

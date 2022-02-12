@@ -111,12 +111,16 @@ header {
   color: #808080;
 }
 
- .app-buttons{
+.app-buttons{
   display: flex;
   cursor: pointer;
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 30px; 
+}
+
+.app-buttons button {
+  text-align: left;
 }
 
 .facebook, .google {
@@ -126,8 +130,9 @@ header {
   width: 100%;
 }
 
-.facebook i, .facebook span {
+.facebook span {
   color: #ffffff;
+  margin-left: 5px;
 }
 
 .google i, .google span {
@@ -144,14 +149,16 @@ header {
   border: 1px solid #808080;
 } 
 
-.app-buttons i {
+.google img {
+  margin: 0 5px 2px 5px;
+}
+
+.app-buttons span {
   font-size: 20px;
-  margin-left: -90px;
   margin-top: 3px;
 }
 
 .app-buttons span {
-  position: absolute;
   font-size: 18px;
   padding-left: 10px;
 }
@@ -286,14 +293,28 @@ footer h3 {
   }
 }
 
-@media (max-width: 615px) {
+@media (max-width: 705px) {
+  .facebook span, .google img  {
+    margin-right: 0;
+  }
   .google{
     margin-top: 10px;
   }
 }
 
-@media (max-width: 580px) {
-  .facebook-l span, .google-l span{
+@media (max-width: 640px) {
+  .app-buttons{
+    display: block;
+    width: 145px;
+    margin: auto;
+  }
+  .facebook span, .google img {
+    margin-left: 0;
+  }
+  .google {
+    margin-bottom: 30px;
+  }
+  /* .facebook-l span, .google-l span{
     font-size: 16px;
   }
   .facebook-l span {
@@ -304,6 +325,6 @@ footer h3 {
   }
   .google-l img{
     margin-left: 15px;
-  }
+  } */
 }
 

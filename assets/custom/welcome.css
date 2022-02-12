@@ -87,7 +87,7 @@ a button {
 }
 
 #get-started-btn a button{
-    background-color: #098019;
+    background-color: #b82727;
     padding: 20px;
     font-size: 20px;
     border-radius: 10px;
@@ -95,13 +95,50 @@ a button {
 }
 
 #get-started-btn a button:hover {
-    background-color: #26a036;
+    background-color: #d34646;
     color: #ffffff;
 }
 
 .second-div {
-  height: 600px;
-  background: #ffffff;
+  margin: 70px 40px;
+  justify-content: center;
+  align-items: center; 
+  display: flex;
+}
+
+.second-div-parent{
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.second-div-child {
+  /* border: solid 2px #23467a; */
+  line-height: 32px;
+  position: relative;
+}
+
+.second-div-child h3 {
+  color:#b82727;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.second-div-child a button {
+  background-color: #b82727;
+  padding: 10px;
+  width: 100px;
+  font-size: 20px;
+  border-radius: 10px;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+.second-div a {
+  color: #000;
+  text-decoration: underline;
 }
 
 footer {
@@ -139,12 +176,12 @@ footer h3 {
   font-size: 18px;
 }
 
-.footer ul {
+.footer ul, .second-div ul {
   list-style: none;
   padding: 0;
 }
 
-.footer li {
+.footer li, .second-div ul {
   line-height: 32px;
 }
 
@@ -192,3 +229,4 @@ footer h3 {
     margin-top: 15px;
   }
 }
+

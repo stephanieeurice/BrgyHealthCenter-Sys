@@ -52,16 +52,11 @@
     <link href="assets/custom/sidebars.css" rel="stylesheet">
     <link href="assets/custom/alert.css" rel="stylesheet">
     <link href="assets/custom/alert2.css" rel="stylesheet">
+    <link href="assets/custom/main_style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- for side navigation icons -->
+
     <title>Manage Accounts</title>
 
-    <style>
-
-      li a
-      { 
-        font-size:18px;
-      }
-
-    </style>
   </head>
   <body>
 
@@ -81,21 +76,39 @@
     ?>
      
     <?php include 'header.php'?>
+    <style>
+    <?php include 'assets/custom/main_style.css'; ?>
+    </style>
 
     <main>
 
-      <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px; ">
+      <div class="d-flex flex-column flex-shrink-0 m-md-0 text-white" style="width: 310px; background-color: #23467a;">
+        <div class="d-flex user_sn" style="padding: 20px 35px">
+          <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
+          <div class="user_details_sn mt-3" >
+            <span><?php echo $name = $_SESSION["usernm"]; ?></span>
+            <span>someone@email.com</span>
+          </div>
+        </div> 
         <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav-item" style="margin-top:20px">
-              <a href="admin_dashboard.php" class="nav-link" style="color: black">
-                  <img src="assets/icons/dashboard.png" height="20px">  Dashboard
+          <li class="nav_item" style="padding: 0 20px">
+            <a href="admin_dashboard.php" class="nav-link" style="color: #ffffff;">
+            <i class="fa fa-th-large"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav_item active">
+            <a href="admin_registration.php" class="nav-link " style="color: #23467a; font-weight: 500;">
+            <i class="fa fa-user-plus"></i> Manage Accounts
+            </a>
+          </li>
+          <li class="nav_item">
+              <a href="admin_settings.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-cog"></i> Settings
               </a>
           </li>
-          <li class="nav-item" style="margin-top:10px">
-              <a href="#" class="nav-link " style="color: #23467a; font-weight: 500;">
-                  <img src="assets/icons/accounts.png" height="20px">  Manage Accounts
-              </a>
-          </li>
+          <div class="logout">
+            <a href="login.php?logout">Logout</a>
+          </div>
         </ul>
       </div>
 

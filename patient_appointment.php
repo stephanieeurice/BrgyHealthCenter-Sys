@@ -11,39 +11,69 @@
 	  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/custom/dashboard.css" rel="stylesheet">
     <link href="assets/custom/sidebars.css" rel="stylesheet">
-    <title>Dashboard</title>
+    <link href="assets/custom/main_style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Set appointment</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-    <style>
-
-      li a
-      { 
-        font-size:18px;
-      }
-
-    </style>
   </head>
   <body onload="loginSuccess()">
      
     <?php include 'header.php'?>
+    <style>
+    <?php include 'assets/custom/main_style.css'; ?>
+    </style>
 
     <main>
 
-          <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light" style="width: 280px; ">
-              <ul class="nav nav-pills flex-column mb-auto">
-                <li class="nav-item" style="margin-top:20px">
-                    <a href="patient_dashboard.php" class="nav-link" style="color: black">
-                        <img src="assets/icons/dashboard.png" height="20px">  Dashboard
-                    </a>
-                </li>
-                <li class="nav-item" style="margin-top:10px">
-                    <a href="#" class="nav-link " style="color: #23467a; font-weight: 500;">
-                        <img src="assets/icons/apt.png" height="20px">  Set Appointment
-                    </a>
-                </li>
-              </ul>
+<div class="d-flex flex-column flex-shrink-0 m-md-0 text-white" style="width: 310px; background-color: #23467a;">
+        <div class="d-flex user_sn" style="padding: 20px 35px">
+          <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
+          <div class="user_details_sn mt-3" >
+            <span><?php echo $name = $_SESSION["usernm"]; ?></span>
+            <span>someone@email.com</span>
           </div>
+        </div>        
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav_item" style="padding: 0 20px">
+            <a href="patient_dashboard.php" class="nav-link" style="color: #ffffff;">
+            <i class="fa fa-th-large"></i> Dashboard
+            </a>
+          </li>
+          <li class="nav_item active">
+              <a href="patient_appointment.php" class="nav-link " style="color: #23467a; font-weight: 500;">
+              <i class="fa fa-plus-circle"></i> Set Appointment
+              </a>
+          </li>
+          <li class="nav_item">
+              <a href="patient_record.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-folder"></i> Records
+              </a>
+          </li>
+          <li class="nav_item">
+              <a href="patient_profile.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-user"></i> Profile
+              </a>
+          </li>
+          <li><hr class="dropdown-divider" style="color: #e1eaf7; height: 2px; margin: 10px"></li>
+          <li class="nav_item">
+              <a href="patient_appointment.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-check-square-o"></i> COVID-19 Consultation
+              </a>
+          </li>
+          <li class="nav_item">
+              <a href="patient_appointment.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-cog"></i> Settings
+              </a>
+          </li>
+          <div class="logout">
+            <a href="login.php?logout">Logout</a>
+          </div>
+        </ul>
+      </div>
 
         <div class="b-example-divider" style="width: 25px"></div>
 

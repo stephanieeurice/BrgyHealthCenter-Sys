@@ -11,8 +11,8 @@
     <link href="assets/custom/login.css" rel="stylesheet">
     <link href="assets/custom/heroes.css" rel="stylesheet">
     <link href="assets/custom/alert2.css" rel="stylesheet">
+    <link href="assets/css/brands.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awFesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body class="text-center" style="">
@@ -121,8 +121,8 @@
               </form>
               <div class="divider-msg">Or login with</div>
               <div class="app-buttons">
-                  <button class="facebook facebook-l" style="margin-right: 10px;"><i class="fa fa-facebook-square"></i><span>Facebook</span></button>
-                  <button class="google google-l"><i><img src="assets/icons/google.png" alt="Google logo" width="20px"></i><span>Google</span></button>
+                  <button class="facebook facebook-l" style="margin-right: 10px;"><span class="fa-brands fa-facebook"></span><span>Facebook</span></button>
+                  <button class="google google-l"><span><img src="assets/icons/google.png" alt="Google logo" width="20px"></span><span>Google</span></button>
               </div>
               <div style="margin-bottom: 30px;">Don't have an account?&nbsp;&nbsp;<a href="register.php">Register here</a></div>
               <!-- inside nung <a href=""></a>

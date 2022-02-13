@@ -57,7 +57,11 @@
           </div>
         </div>        
         <ul class="nav nav-pills flex-column mb-auto">
+<<<<<<< HEAD
           <li class="nav_item active" style="padding: 0 20px">
+=======
+        <li class="nav_item active" style="padding: 0 20px">
+>>>>>>> fdd1a76806fdd3b57c8a0b0ac49a798413943958
             <a href="patient_dashboard.php" class="nav-link" style="color: #23467a; font-weight: 500;">
             <i class="fa fa-th-large"></i> Dashboard
             </a>

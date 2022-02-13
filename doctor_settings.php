@@ -42,8 +42,8 @@
           </div>
         </div> 
         <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav_item active" style="padding: 0 20px">
-            <a href="doctor_dashboard.php" class="nav-link" style="color: #23467a; font-weight: 500;">
+          <li class="nav_item" style="padding: 0 20px">
+            <a href="doctor_dashboard.php" class="nav-link" style="color: #ffffff;">
             <i class="fa fa-th-large"></i> Dashboard
             </a>
           </li>
@@ -52,8 +52,8 @@
               <i class="fa fa-user"></i> Profile
               </a>
           </li>
-          <li class="nav_item">
-              <a href="doctor_settings.php" class="nav-link " style="color: #ffffff;">
+          <li class="nav_item active">
+              <a href="doctor_settings.php" class="nav-link " style="color: #23467a; font-weight: 500;">
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
@@ -66,46 +66,11 @@
         <div class="b-example-divider" style="width: 25px"></div>
 
         <div class="container-fluid" style="padding-left:30px;margin-top: -15px">
-        
           <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px">Appointments</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Settings</h2>
             </div>
-            <p class="text-muted" style="margin-top:-12px">Track all patients appointments</p>
-          </div>
-
-          <div class="table-responsive" style="margin-top:10px">
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th scope="col">Apt ID</th>
-                  <th scope="col">Patient Name</th>
-                  <th scope="col">Date Issued</th>
-                  <th scope="col">State Condition</th>
-                  <th scope="col">Appointment Date</th>
-                  <th scope="col">Appointment Time</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Action</th>
-                </tr>
-              </thead>
-              <tbody>
-                <?php while ($row = mysqli_fetch_array($results)) { ?>
-                    <tr>
-                      <td><?php echo $row['id']; ?></td>
-                      <td><?php echo $row['name']; ?></td>
-                      <td><?php echo date('Y-m-d', strtotime($row['date_submitted'])); ?></td>
-                      <td><?php echo $row['state_condition']; ?></td>
-                      <td><?php echo $row['apt_date']; ?></td>
-                      <td><?php echo $row['apt_time']; ?></td>
-                      <td><?php if ($row['apt_action']) echo $row['apt_action'] ?></td>
-                      <td>
-                        <div class="btn btn-primary" id="actionButton" uid="<?php echo $row['id'] ?>">Action</div>
-                      </td>
-                    </tr>
-                <?php } ?>
-              </tbody>
-            </table>
-          </div>
+            <p class="text-muted" style="margin-top:-12px">Change some options based on your preferences</p>
 
         </div>
     </main>

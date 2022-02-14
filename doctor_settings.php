@@ -48,12 +48,17 @@
             </a>
           </li>
           <li class="nav_item">
+              <a href="doctor_messages.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-envelope"></i> Messages
+              </a>
+          </li>
+          <li class="nav_item">
               <a href="doctor_profile.php" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-user"></i> Profile
               </a>
           </li>
           <li class="nav_item active">
-              <a href="doctor_settings.php" class="nav-link " style="color: #23467a; font-weight: 500;">
+              <a href="doctor_settings.php" class="nav-link " style="color: #23467a; font-weight: 700; font-size: 20px;">
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
@@ -76,38 +81,6 @@
     </main>
 
   </body>
-
-  <script>
-    const clickAction = (e) => {
-    const buttonUID = e.target.getAttribute('uid')
-    Swal.fire({
-      title: 'Appointment Approval',
-      text: 'Accept, Decline or Delete Appointment.',
-      confirmButtonText: 'Cancel',
-      html: `
-        <form id="approvalForm" action="includes/appointmentaction.php" method="post">
-          <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <select name="action" id="action" class='btn btn-info m-3' required>
-              <option value="" selected disabled hidden>Choose Action</option>
-              <option value="Accepted">Accept</option>
-              <option value="Declined">Decline</option>
-              <option value="Deleted">Delete</option>
-            </select>
-            <textarea class='form-control' name="remarks" rows="4" cols="50" placeholder='Remarks/Comments' maxlength=99></textarea>
-            <input type="text" value='${buttonUID}' name='id' hidden>
-            <input type="text" value='${new Date()}' name='actionDate' hidden >
-            <input type="submit" name='submit' value='Submit' class='btn btn-primary m-3' >
-          </div>
-        </form>
-      `
-      })
-    }
-
-    const actionButtons = document.querySelectorAll('#actionButton')
-    actionButtons.forEach((e) => {
-      e.addEventListener('click', clickAction)
-    })
-  </script>
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 

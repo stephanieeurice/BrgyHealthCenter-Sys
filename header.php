@@ -16,12 +16,6 @@
         <strong style="color: #fff"><?php echo $name = $_SESSION["usernm"]; ?></strong>
       </a>
       <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-<<<<<<< HEAD
-=======
-        <li><a class="dropdown-item" href="#">Settings</a></li>
-        <li><a class="dropdown-item" href="#">Profile</a></li>
-        <li><hr class="dropdown-divider"></li>
->>>>>>> fdd1a76806fdd3b57c8a0b0ac49a798413943958
         <li><a class="dropdown-item" href="login.php?logout">Logout</a></li>
       </ul>
     </div> -->

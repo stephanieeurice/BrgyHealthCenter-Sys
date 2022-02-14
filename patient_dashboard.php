@@ -58,13 +58,18 @@
         </div>        
         <ul class="nav nav-pills flex-column mb-auto">
           <li class="nav_item active" style="padding: 0 20px">
-            <a href="patient_dashboard.php" class="nav-link" style="color: #23467a; font-weight: 500;">
+            <a href="patient_dashboard.php" class="nav-link" style="color: #23467a; font-weight: 700; font-size: 20px;">
             <i class="fa fa-th-large"></i> Dashboard
             </a>
           </li>
           <li class="nav_item">
               <a href="patient_appointment.php" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-plus-circle"></i> Set Appointment
+              </a>
+          </li>
+          <li class="nav_item">
+              <a href="patient_messages.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-envelope"></i> Messages
               </a>
           </li>
           <li class="nav_item">

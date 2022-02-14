@@ -2,6 +2,10 @@
   session_start();
   include 'includes/db.inc.php';
 
+  if(!isset($_SESSION['unique_id'])) {
+    header("location: login.php");
+  }
+
   //Select specific datas for viewing of table, inner join for fetching data from foreign key
   $results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.state_condition, apt.apt_date, apt.apt_time, apt.apt_action FROM appointment apt INNER JOIN patient pt ON apt.patient_id = pt.id");
 ?>
@@ -15,6 +19,7 @@
     <link href="assets/custom/dashboard.css" rel="stylesheet">
     <link href="assets/custom/sidebars.css" rel="stylesheet">
     <link href="assets/custom/main_style.css" rel="stylesheet">
+    <link href="assets/custom/message.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  <!-- for side navigation icons -->
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--sweetalert cdn-->

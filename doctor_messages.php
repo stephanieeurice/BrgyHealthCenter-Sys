@@ -76,12 +76,35 @@
               <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Have a conversation with your patient</p>
-
         </div>
+        <div class="d-flex justify-content-center h-100">
+            <section class="users">
+              <?php
+                $results = mysqli_query($conn , "SELECT * FROM patient");
+                if (mysqli_num_rows($results) > 0) {
+                  $row = mysqli_fetch_assoc($results);
+                }
+              ?>
+              <div class="search">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  <button type="button" class="btn btn-outline-dark"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+              <div class="users-list">
+                
+              </div>
+            </section>
+            <section class="chat-area" style="background: #f7f7f7;">
+              <div class="align-middle text-center">
+                No messages available
+              </div>
+            </section>
+          </div>
     </main>
 
   </body>
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-
+  <script src="assets/custom/users_doctors.js"></script>
 </html>

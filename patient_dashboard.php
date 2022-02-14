@@ -68,6 +68,11 @@
               </a>
           </li>
           <li class="nav_item">
+              <a href="patient_message.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-envelope"></i> Messages
+              </a>
+          </li>
+          <li class="nav_item">
               <a href="patient_record.php" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-folder"></i> Records
               </a>

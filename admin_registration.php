@@ -22,7 +22,9 @@
       $specialization = $record1['specialization'];
 
 
-      $query = "INSERT INTO doctor (email, password, name, address, birthday, gender, contactnum, specialization) VALUES ('$email','$password', '$name','$address','$birthday','$gender', '$contactnum','$specialization')";
+      $status = "Active now";
+      $random_id = rand(time(), 10000000);
+      $query = "INSERT INTO doctor (email, password, name, address, birthday, gender, contactnum, specialization, unique_id, status) VALUES ('$email','$password', '$name','$address','$birthday','$gender', '$contactnum','$specialization','$random_id','$status')";
       mysqli_query($conn, $query);
 
       $remove =  "DELETE FROM doctor_reg WHERE id=$id";

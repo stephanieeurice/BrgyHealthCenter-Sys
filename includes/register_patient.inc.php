@@ -23,8 +23,10 @@
 		$password = $_POST['password'];
 		$contactnum = $_POST['contactnum'];
 
+		$status = "Active now";
+        $random_id = rand(time(), 10000000);
 		$birthday = date('Y-m-d', strtotime($birthday));
-		$query = "INSERT INTO patient (email, password, name, address, birthday, gender, contactnum) VALUES ('$email','$password', '$name','$address','$birthday','$gender','$contactnum')";
+		$query = "INSERT INTO patient (email, password, name, address, birthday, gender, contactnum, unique_id, status) VALUES ('$email','$password', '$name','$address','$birthday','$gender','$contactnum','$random_id','$status')";
 		mysqli_query($conn, $query);
 		header('location: ../login.php?register');
 	}

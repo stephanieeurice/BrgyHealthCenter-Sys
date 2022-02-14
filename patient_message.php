@@ -106,11 +106,11 @@
         <div class="b-example-divider" style="width: 25px"></div>
 
         <div class="container-fluid" style="padding-left:30px;margin-top: -15px">
-          <div class="border-bottom">  
+        <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
               <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
-            <p class="text-muted" style="margin-top:-12px">View your medical records</p>
+            <p class="text-muted" style="margin-top:-12px">Have a conversation with your doctor.</p>
           </div>
 
           <div class="d-flex justify-content-center h-100">

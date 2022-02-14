@@ -4,8 +4,8 @@
 	include 'includes/db.inc.php';
 
   if(!isset($_SESSION['unique_id'])) {
-    header("location: login.php");
-  }
+        header("location: login.php");
+    }
 
   //get SESSION userid from LOGGING IN
   $id = $_SESSION["userid"];
@@ -112,7 +112,9 @@
               <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Have a conversation with your doctor.</p>
-            <div class="d-flex justify-content-center h-100">
+          </div>
+          
+          <div class="d-flex justify-content-center h-100">
             <section class="users">
               <?php
                 $results = mysqli_query($conn , "SELECT * FROM doctor");

@@ -81,8 +81,9 @@
               <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Have a conversation with your patient</p>
-        </div>
-        <div class="d-flex justify-content-center h-100">
+          </div>
+          
+          <div class="d-flex justify-content-center h-100">
             <section class="users">
               <?php
                 $results = mysqli_query($conn , "SELECT * FROM patient");
@@ -106,6 +107,8 @@
               </div>
             </section>
           </div>
+
+        </div>
     </main>
 
   </body>

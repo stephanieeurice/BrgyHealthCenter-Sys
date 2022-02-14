@@ -79,9 +79,9 @@
         
           <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px">Messages</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
-            <p class="text-muted" style="margin-top:-12px">Track all patients appointments</p>
+            <p class="text-muted" style="margin-top:-12px">Have a conversation with your patient</p>
           </div>
 
           <div class="d-flex justify-content-center h-100">

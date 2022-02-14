@@ -19,7 +19,7 @@
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!--sweetalert cdn-->
 
-    <title>Doctor Dashboard</title>
+    <title>Messages</title>
 
   </head>
   <body>
@@ -47,13 +47,8 @@
             <i class="fa fa-th-large"></i> Dashboard
             </a>
           </li>
-          <li class="nav_item" style="padding: 0 20px">
-            <a href="doctor_message.php" class="nav-link" style="color: #ffffff;">
-            <i class="fa fa-envelope"></i> Messages
-            </a>
-          </li>
-          <li class="nav_item">
-              <a href="doctor_messages.php" class="nav-link " style="color: #ffffff;">
+          <li class="nav_item active">
+              <a href="patient_messages.php" class="nav-link " style="color: #23467a; font-weight: 700; font-size: 20px;">
               <i class="fa fa-envelope"></i> Messages
               </a>
           </li>
@@ -62,8 +57,8 @@
               <i class="fa fa-user"></i> Profile
               </a>
           </li>
-          <li class="nav_item active">
-              <a href="doctor_settings.php" class="nav-link " style="color: #23467a; font-weight: 700; font-size: 20px;">
+          <li class="nav_item">
+              <a href="doctor_settings.php" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
@@ -78,9 +73,9 @@
         <div class="container-fluid" style="padding-left:30px;margin-top: -15px">
           <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Settings</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
-            <p class="text-muted" style="margin-top:-12px">Change some options based on your preferences</p>
+            <p class="text-muted" style="margin-top:-12px">Have a conversation with your patient</p>
 
         </div>
     </main>

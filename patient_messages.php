@@ -23,7 +23,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 
-    <title>Dashboard</title>
+    <title>Messages</title>
 
   </head>
   <body>
@@ -57,8 +57,8 @@
           </div>
         </div>        
         <ul class="nav nav-pills flex-column mb-auto">
-          <li class="nav_item active" style="padding: 0 20px">
-            <a href="patient_dashboard.php" class="nav-link" style="color: #23467a; font-weight: 700; font-size: 20px;">
+            <li class="nav_item" style="padding: 0 20px">
+            <a href="patient_dashboard.php" class="nav-link" style="color: #ffffff;">
             <i class="fa fa-th-large"></i> Dashboard
             </a>
           </li>
@@ -67,29 +67,29 @@
               <i class="fa fa-plus-circle"></i> Set Appointment
               </a>
           </li>
-          <li class="nav_item">
-              <a href="patient_messages.php" class="nav-link " style="color: #ffffff;">
+          <li class="nav_item active">
+              <a href="patient_messages.php" class="nav-link " style="color: #23467a; font-weight: 700; font-size: 20px;">
               <i class="fa fa-envelope"></i> Messages
               </a>
           </li>
           <li class="nav_item">
-              <a href="patient_record.php" class="nav-link " style="color: #ffffff;">
+              <a href="patient_record.php" class="nav-link " style="color: #ffffff">
               <i class="fa fa-folder"></i> Records
               </a>
           </li>
           <li class="nav_item">
-              <a href="patient_profile.php" class="nav-link " style="color: #ffffff;">
+              <a href="patient_profile.php" class="nav-link" style="color:#ffffff;">
               <i class="fa fa-user"></i> Profile
               </a>
           </li>
           <li><hr class="dropdown-divider" style="color: #e1eaf7; height: 2px; margin: 10px"></li>
           <li class="nav_item">
-              <a href="patient_covid_consultation.php" class="nav-link " style="color: #ffffff;">
+              <a href="patient_covid_consultation.php" class="nav-link " style="color:#ffffff;">
               <i class="fa fa-check-square-o"></i> COVID-19 Consultation
               </a>
           </li>
           <li class="nav_item">
-              <a href="patient_settings.php" class="nav-link " style="color: #ffffff;">
+              <a href="patient_settings.php" class="nav-link "  style="color: #ffffff;">
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
@@ -102,50 +102,11 @@
         <div class="b-example-divider" style="width: 25px"></div>
 
         <div class="container-fluid" style="padding-left:30px;margin-top: -15px">
-        
           <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a; ">Appointments</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
-            <p class="text-muted" style="margin-top:-12px">Track your appointments</p>
-          </div>
-
-          <div class="table-responsive" style="margin-top:10px">
-            <table class="table table-striped table-sm">
-              <thead>
-                <tr>
-                  <th scope="col">Apt ID</th>
-                  <th scope="col">Date Issued</th>
-                  <th scope="col">State Condition</th>
-                  <th scope="col">Appointment Date</th>
-                  <th scope="col">Appointment Time</th>
-                </tr>
-              </thead>
-              <tbody>
-
-                <!-- Fetch Data Rows from db -->
-
-                <?php while ($row = mysqli_fetch_array($results)) { ?>
-                    <tr>
-                      <td><?php echo $row['id']; ?></td>
-                      <td><?php echo date('Y-m-d', strtotime($row['date_submitted'])); ?></td>
-                      <td><?php echo $row['state_condition']; ?></td>
-                      <td><?php echo $row['apt_date']; ?></td>
-                      <td><?php echo $row['apt_time']; ?></td>
-                    </tr>
-                <?php } ?>
-              </tbody>
-            </table>
-          </div>
-
-
-          <div style="text-align: right; margin-top: 100px;">
-            <a href="patient_appointment.php">
-              <button style="padding: 10px 20px; border: none; border-radius: 0.5rem; width: 190px; background-color:#23467a; color: #fff;" >
-              <i class="fa fa-plus-circle" style="font-size: 19px; margin-right: 10px;"></i><span>Set an appointment</span>
-              </button>
-            </a>
-          </div>
+            <p class="text-muted" style="margin-top:-12px">Have a conversation with your doctor.</p>
 
         </div>
     </main>

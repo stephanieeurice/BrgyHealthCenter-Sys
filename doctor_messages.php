@@ -2,10 +2,6 @@
   session_start();
   include 'includes/db.inc.php';
 
-  if(!isset($_SESSION['unique_id'])) {
-    header("location: login.php");
-  }
-
   //Select specific datas for viewing of table, inner join for fetching data from foreign key
   $results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.state_condition, apt.apt_date, apt.apt_time, apt.apt_action FROM appointment apt INNER JOIN patient pt ON apt.patient_id = pt.id");
 ?>

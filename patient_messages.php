@@ -3,10 +3,6 @@
   session_start();
 	include 'includes/db.inc.php';
 
-  if(!isset($_SESSION['unique_id'])) {
-        header("location: login.php");
-    }
-
   //get SESSION userid from LOGGING IN
   $id = $_SESSION["userid"];
 

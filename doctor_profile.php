@@ -38,7 +38,7 @@
           <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
           <div class="user_details_sn mt-3" >
             <span><?php echo $name = $_SESSION["usernm"]; ?></span>
-            <span>someone@email.com</span>
+            <span><?php echo $name = $_SESSION["userem"]; ?></span>
           </div>
         </div> 
         <ul class="nav nav-pills flex-column mb-auto">
@@ -62,9 +62,6 @@
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
-          <div class="logout">
-            <a href="login.php?logout">Logout</a>
-          </div>
         </ul>
       </div>
 
@@ -85,7 +82,7 @@
                 <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="150" width="150" style="border-radius: 75px; border: 2px solid #23467a;">
                 <div class="user_details_sn" style="margin: 35px 0 0 20px;" >
                   <span style="color: #23467a; font-size: 20px;"><?php echo $name = $_SESSION["usernm"]; ?></span><br>
-                  <span style="font-size: 16px;">someone@email.com</span><br>
+                  <span style="font-size: 16px;"><?php echo $name = $_SESSION["userem"]; ?></span> <br>
                   <a href="">
                     <button style="margin-top: 15px; text-align: center; padding: 10px 20px; border: none; border-radius: 0.5rem; background-color:#36a7e3; color: #fff;" >
                     <i style="font-size: 19px;"></i><span>Edit profile</span>

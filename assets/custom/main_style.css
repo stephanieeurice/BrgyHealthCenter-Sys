@@ -68,3 +68,130 @@
 .user-details ::placeholder {
     color: black;
 }
+
+/* Zoom button */
+label#zoom-btn {
+    background-color: #23467a;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
+    align-self: flex-end;
+    right: 100px;
+}
+label#zoom-btn:hover {
+    background-color: #3367b6;
+}
+label#zoom-btn i{
+    color: #ffffff;
+    font-size: 18px;
+}
+/* Zoom meeting popup */
+.vc-popup {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    width: 400px;
+    background: #ffffff;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.4);
+}
+#click {
+    display: none;
+}
+#click:checked ~ .vc-popup {
+    opacity: 1;
+    visibility: visible;
+} 
+.header {
+    height: 70px;
+    background-color: #3881c5;
+    overflow: hidden;
+    border-radius: 3px 3px 0 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+}
+.header h3{
+    color: #ffffff;
+    padding: 20px;
+    font-weight: normal;
+}
+.fa-times {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.fa-times:hover {
+    color: #293652;
+    transition: .5s;
+}
+.vc-popup-details {
+    padding: 40px;
+}
+
+/* Logout warning message */
+.logout-dialog {
+    /* opacity: 0;
+    visibility: hidden; */
+    position: absolute;
+    top: 55px;
+    right: 25px;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 10px 15px 1px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s linear 0s;
+}
+.logout-dialog h5 {
+    font-weight: bold;
+    color: #3881c5;
+}
+.logout-dialog a {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+.logout-dialog a#lu-no {
+    padding: 5px 15px;
+    background-color: #ffffff;
+    border: solid 1px #3881c5;
+    color: #3881c5;
+}
+.logout-dialog a#lu-no:hover {
+    background-color: #e8f4ff;
+}
+.logout-dialog a#lu-yes {
+    padding: 6px 16px;
+    background-color: #3881c5;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+}
+.logout-dialog a#lu-yes:hover {
+    background-color: #4096e7;
+}
+.logout-btns {
+    float: right;
+    margin-top: 20px;
+}
+.logout-details, .logout-btns {
+    font-size: 16px;
+}
+#dont-logout, #click-logout {
+    display: none;
+}
+#click-logout:checked ~ .logout-dialog {
+    opacity: 1;
+    visibility: visible;
+} 
+
+
+.user-data {
+    padding: 10px;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+    font-size: 16px;
+}

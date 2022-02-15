@@ -34,7 +34,7 @@
           <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
           <div class="user_details_sn mt-3" >
             <span><?php echo $name = $_SESSION["usernm"]; ?></span>
-            <span>someone@email.com</span>
+            <span><?php echo $name = $_SESSION["userem"]; ?></span>
           </div>
         </div> 
         <ul class="nav nav-pills flex-column mb-auto">
@@ -53,9 +53,6 @@
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
-          <div class="logout">
-            <a href="login.php?logout">Logout</a>
-          </div>
         </ul>
       </div>
 

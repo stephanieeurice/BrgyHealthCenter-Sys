@@ -22,7 +22,9 @@
       $specialization = $record1['specialization'];
 
 
-      $query = "INSERT INTO doctor (email, password, name, address, birthday, gender, contactnum, specialization) VALUES ('$email','$password', '$name','$address','$birthday','$gender', '$contactnum','$specialization')";
+      $status = "Active now";
+      $random_id = rand(time(), 10000000);
+      $query = "INSERT INTO doctor (email, password, name, address, birthday, gender, contactnum, specialization, unique_id, status) VALUES ('$email','$password', '$name','$address','$birthday','$gender', '$contactnum','$specialization','$random_id','$status')";
       mysqli_query($conn, $query);
 
       $remove =  "DELETE FROM doctor_reg WHERE id=$id";
@@ -87,7 +89,7 @@
           <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
           <div class="user_details_sn mt-3" >
             <span><?php echo $name = $_SESSION["usernm"]; ?></span>
-            <span>someone@email.com</span>
+            <span><?php echo $name = $_SESSION["userem"]; ?></span>
           </div>
         </div> 
         <ul class="nav nav-pills flex-column mb-auto">
@@ -106,9 +108,6 @@
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
-          <div class="logout">
-            <a href="login.php?logout">Logout</a>
-          </div>
         </ul>
       </div>
 

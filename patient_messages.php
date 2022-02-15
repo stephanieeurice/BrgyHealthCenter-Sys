@@ -5,8 +5,9 @@
 
   //get SESSION userid from LOGGING IN
   $id = $_SESSION["userid"];
-
-  $results = mysqli_query($conn, "SELECT * FROM appointment apt WHERE apt.patient_id = $id");
+  if(!isset($_SESSION['unique_id'])) {
+    header("location: login.php");
+  }
 ?>
 
 <html lang="en">
@@ -20,6 +21,7 @@
     <link href="assets/custom/alert.css" rel="stylesheet">
     <link href="assets/custom/alert2.css" rel="stylesheet">
     <link href="assets/custom/main_style.css" rel="stylesheet">
+    <link href="assets/custom/message.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 
@@ -53,7 +55,7 @@
           <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
           <div class="user_details_sn mt-3" >
             <span><?php echo $name = $_SESSION["usernm"]; ?></span>
-            <span>someone@email.com</span>
+            <span><?php echo $name = $_SESSION["userem"]; ?></span>
           </div>
         </div>        
         <ul class="nav nav-pills flex-column mb-auto">
@@ -93,9 +95,6 @@
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
-          <div class="logout">
-            <a href="login.php?logout">Logout</a>
-          </div>
         </ul>
       </div>
 
@@ -107,6 +106,32 @@
               <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Have a conversation with your doctor.</p>
+          </div>
+          
+          <div class="d-flex justify-content-center h-100">
+            <section class="users">
+            <?php
+                $sql2 = mysqli_query($conn , "SELECT * FROM doctor WHERE unique_id = {$_SESSION["unique_id"]}");
+                if (mysqli_num_rows($sql2) > 0) {
+                  $row2 = mysqli_fetch_assoc($sql2);
+                }
+              ?>
+              <div class="search">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  <button type="button" class="btn btn-outline-dark"><i class="fa fa-search"></i></button>
+                </div>
+              </div>
+              <div class="users-list">
+                
+              </div>
+            </section>
+            <section class="chat-area" style="background: #f7f7f7;">
+              <div class="align-middle text-center">
+                No messages available
+              </div>
+            </section>
+          </div>
 
         </div>
     </main>
@@ -119,5 +144,5 @@
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/custom/alert.js"></script>
-
+  <script src="assets/custom/users_patients.js"></script>
 </html>

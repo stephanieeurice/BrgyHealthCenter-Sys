@@ -38,7 +38,7 @@
           <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
           <div class="user_details_sn mt-3" >
             <span><?php echo $name = $_SESSION["usernm"]; ?></span>
-            <span>someone@email.com</span>
+            <span><?php echo $name = $_SESSION["userem"]; ?></span>
           </div>
         </div> 
         <ul class="nav nav-pills flex-column mb-auto">
@@ -47,6 +47,11 @@
             <i class="fa fa-th-large"></i> Dashboard
             </a>
           </li>
+          <!-- <li class="nav_item" style="padding: 0 20px">
+            <a href="doctor_message.php" class="nav-link" style="color: #ffffff;">
+            <i class="fa fa-envelope"></i> Messages
+            </a>
+          </li> -->
           <li class="nav_item">
               <a href="doctor_messages.php" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-envelope"></i> Messages
@@ -62,9 +67,6 @@
               <i class="fa fa-cog"></i> Settings
               </a>
           </li>
-          <div class="logout">
-            <a href="login.php?logout">Logout</a>
-          </div>
         </ul>
       </div>
 
@@ -76,8 +78,8 @@
               <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Settings</h2>
             </div>
             <p class="text-muted" style="margin-top:-12px">Change some options based on your preferences</p>
-
         </div>
+        
     </main>
 
   </body>

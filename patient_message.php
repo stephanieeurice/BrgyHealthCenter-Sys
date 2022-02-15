@@ -6,7 +6,9 @@
   //get SESSION userid from LOGGING IN
   $id = $_SESSION["userid"];
 
-  $results = mysqli_query($conn, "SELECT * FROM appointment apt WHERE apt.patient_id = $id");
+  if(!isset($_SESSION['unique_id'])) {
+    header("location: login.php");
+  }
 ?>
 
 <html lang="en">
@@ -20,10 +22,11 @@
     <link href="assets/custom/alert.css" rel="stylesheet">
     <link href="assets/custom/alert2.css" rel="stylesheet">
     <link href="assets/custom/main_style.css" rel="stylesheet">
+    <link href="assets/custom/message.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
 
-    <title>Record</title>
+    <title>Messages</title>
 
   </head>
   <body>
@@ -67,13 +70,13 @@
               <i class="fa fa-plus-circle"></i> Set Appointment
               </a>
           </li>
-          <li class="nav_item">
-              <a href="patient_messages.php" class="nav-link " style="color: #ffffff;">
+          <li class="nav_item active">
+              <a href="patient_messages.php" class="nav-link " style="color: #23467a; font-weight: 500;">
               <i class="fa fa-envelope"></i> Messages
               </a>
           </li>
-          <li class="nav_item active">
-              <a href="patient_record.php" class="nav-link " style="color: #23467a; font-weight: 700; font-size: 20px;">
+          <li class="nav_item">
+              <a href="patient_record.php" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-folder"></i> Records
               </a>
           </li>
@@ -99,13 +102,57 @@
         <div class="b-example-divider" style="width: 25px"></div>
 
         <div class="container-fluid" style="padding-left:30px;margin-top: -15px">
-          <div class="border-bottom">  
+        <div class="border-bottom">  
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">  
-              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Records</h2>
+              <h2 style="margin-top: 35px;margin-bottom: 15px; color: #23467a;">Messages</h2>
             </div>
-            <p class="text-muted" style="margin-top:-12px">View your medical records</p>
+            <p class="text-muted" style="margin-top:-12px">Have a conversation with your doctor.</p>
           </div>
 
+          <div class="d-flex justify-content-center h-100">
+            <section class="users">
+                <header>
+                    <?php
+                        $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
+                        $sql2 = mysqli_query($conn , "SELECT * FROM doctor WHERE unique_id = {$user_id}");
+                        if (mysqli_num_rows($sql2) > 0) {
+                            $row2 = mysqli_fetch_assoc($sql2);
+                        }
+                    ?>
+                    <a href="patient_messages.php"><i class="fa fa-arrow-left"></i></a>
+                    <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
+                    <div class="details">
+                        <span><?php echo $row2['name'] ?></span>
+                        <p><?php echo $row2['status'] ?></p>
+                    </div>
+                </header>
+            </section>
+            <section class="chat-area" style="background: #f7f7f7;">
+              <header style="display: flex; justify-content: space-between; align-items: flex-end;">
+                <div style="display: flex;">
+                  <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
+                  <div class="details">
+                    <span><?php echo $row2['name'] ?></span>
+                    <p><?php echo $row2['status'] ?></p>
+                  </div>
+                </div>
+                <!-- <div style="align-self: center; margin-bottom: 5px;">
+                  <input type="checkbox" id="click">
+                  <label for="click" id="zoom-btn"><i class="fa fa-video-camera"></i></label>
+                </div> -->
+              </header>
+              <div class="chat-box">
+                
+              </div>
+              <form action="#" class="typing-area">
+                <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
+                <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
+                <input type="text" name="message" placeholder="Enter message...">
+                <button type="button" class="btn btn-outline-dark"><i class="fa fa-paper-plane"></i></button>
+              </form>
+            </section>
+          </div>
+        
         </div>
     </main>
 
@@ -117,5 +164,6 @@
 
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/custom/alert.js"></script>
+  <script src="assets/custom/chat_patients.js"></script>
 
 </html>

@@ -103,7 +103,7 @@
 
                       <div class="col-sm-9 user-inputs">
                         <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="ex. Juan Dela Cruz" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Juan Dela Cruz" required>
                       </div>
 
                       <div class="col-3 user-inputs">
@@ -173,7 +173,7 @@
 
                       <div class="col-sm-9 user-inputs">
                         <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="ex. Juan Dela Cruz" required>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Dr. Juan Dela Cruz" required>
                       </div>
 
                       <div class="col-3 user-inputs">

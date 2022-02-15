@@ -6,7 +6,9 @@
   //get SESSION userid from LOGGING IN
   $id = $_SESSION["userid"];
 
-  $results = mysqli_query($conn, "SELECT * FROM appointment apt WHERE apt.patient_id = $id");
+  if(!isset($_SESSION['unique_id'])) {
+    header("location: login.php");
+  }
 ?>
 
 <html lang="en">
@@ -115,16 +117,16 @@
                 <header>
                     <?php
                         $user_id = mysqli_real_escape_string($conn, $_GET['user_id']);
-                        $results = mysqli_query($conn , "SELECT * FROM doctor WHERE unique_id = {$user_id}");
-                        if (mysqli_num_rows($results) > 0) {
-                            $row = mysqli_fetch_assoc($results);
+                        $sql2 = mysqli_query($conn , "SELECT * FROM doctor WHERE unique_id = {$user_id}");
+                        if (mysqli_num_rows($sql2) > 0) {
+                            $row2 = mysqli_fetch_assoc($sql2);
                         }
                     ?>
                     <a href="patient_messages.php"><i class="fa fa-arrow-left"></i></a>
                     <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
                     <div class="details">
-                        <span><?php echo $row['name'] ?></span>
-                        <p><?php echo $row['status'] ?></p>
+                        <span><?php echo $row2['name'] ?></span>
+                        <p><?php echo $row2['status'] ?></p>
                     </div>
                 </header>
             </section>
@@ -132,8 +134,8 @@
               <header>
               <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
                 <div class="details">
-                  <span><?php echo$row['name'] ?></span>
-                  <p><?php echo$row['status'] ?></p>
+                  <span><?php echo $row2['name'] ?></span>
+                  <p><?php echo $row2['status'] ?></p>
                 </div>
               </header>
               <div class="chat-box">

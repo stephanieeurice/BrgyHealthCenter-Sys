@@ -7,7 +7,7 @@
         $message = mysqli_real_escape_string($conn, $_POST['message']);
 
         if (!empty($message)) {
-            $results = mysqli_query($conn, "INSERT INTO messages (incoming_msg_id, outgoing_msg_id, msg)
+            $sql2 = mysqli_query($conn, "INSERT INTO messages (incoming_msg_id, outgoing_msg_id, msg)
                                 VALUES ({$incoming_id}, {$outgoing_id}, '{$message}')") or die();
         }
     } else {

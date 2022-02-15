@@ -100,6 +100,10 @@ function loginUser($conn, $email, $password, $auth) {
 		if ($auth == "Patient")
 		{
 			session_start();
+			$sql2 = mysqli_query($conn, "SELECT * FROM patient WHERE email = '{$email}' AND password = '{$password}'");
+			$row2 = mysqli_fetch_assoc($sql2);
+			$_SESSION["unique_id"] = $row2["unique_id"];
+			
 			$_SESSION["userid"] = $userExists["id"];
 			$_SESSION["usernm"] = $userExists["name"];
 			$_SESSION["userauth"] = $auth;
@@ -110,6 +114,10 @@ function loginUser($conn, $email, $password, $auth) {
 		else if ($auth == "Doctor")
 		{
 			session_start();
+			$sql2 = mysqli_query($conn, "SELECT * FROM doctor WHERE email = '{$email}' AND password = '{$password}'");
+			$row2 = mysqli_fetch_assoc($sql2);
+			$_SESSION["unique_id"] = $row2["unique_id"];
+
 			$_SESSION["userid"] = $userExists["id"];
 			$_SESSION["usernm"] = $userExists["name"];
 			$_SESSION["userauth"] = $auth;

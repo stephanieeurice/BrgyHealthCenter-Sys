@@ -5,8 +5,9 @@
 
   //get SESSION userid from LOGGING IN
   $id = $_SESSION["userid"];
-
-  $results = mysqli_query($conn, "SELECT * FROM appointment apt WHERE apt.patient_id = $id");
+  if(!isset($_SESSION['unique_id'])) {
+    header("location: login.php");
+  }
 ?>
 
 <html lang="en">
@@ -112,10 +113,10 @@
           
           <div class="d-flex justify-content-center h-100">
             <section class="users">
-              <?php
-                $results = mysqli_query($conn , "SELECT * FROM doctor");
-                if (mysqli_num_rows($results) > 0) {
-                  $row = mysqli_fetch_assoc($results);
+            <?php
+                $sql2 = mysqli_query($conn , "SELECT * FROM doctor WHERE unique_id = {$_SESSION["unique_id"]}");
+                if (mysqli_num_rows($sql2) > 0) {
+                  $row2 = mysqli_fetch_assoc($sql2);
                 }
               ?>
               <div class="search">

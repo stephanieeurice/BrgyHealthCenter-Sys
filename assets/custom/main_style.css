@@ -195,3 +195,18 @@ label#zoom-btn i{
     border-radius: 5px;
     font-size: 16px;
 }
+.form-label {
+    font-weight: 500;
+}
+.genpdf-btn {
+    font-size: 18px; 
+    margin-top: 15px; 
+    text-align: center; 
+    padding: 10px 20px; 
+    border-radius: 0.5rem; 
+    border: none;
+    background-color:#36a7e3; 
+    color: #fff;
+    float: right;
+    margin-right: 40%;
+}

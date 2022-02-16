@@ -117,9 +117,9 @@
                 }
               ?>
               <div class="search">
-                <div class="input-group mb-3">
-                  <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
-                  <button type="button" class="btn btn-outline-dark"><i class="fa fa-search"></i></button>
+                <div class="input-group mb-3" style="width: 100%;">
+                  <input style="border-radius: 20px 0 0 20px; border: 1px solid #23467a;" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                  <button style="border-radius: 0 20px 20px 0; background: #23467a; color: #ffffff;" type="button" class="btn"><i class="fa fa-search"></i></button>
                 </div>
               </div>
               <div class="users-list">

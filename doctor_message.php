@@ -109,7 +109,7 @@
                     <p><?php echo $row2['status'] ?></p>
                   </div>
                 </div>
-                <div style="align-self: center; margin-bottom: 5px; margin-left: 350px;">
+                <div style="align-self: center; margin-bottom: 5px; margin-left: 500px;">
                   <input type="checkbox" id="click">
                   <label for="click" id="zoom-btn"><i class="fa fa-video-camera"></i></label>
                   <div class="vc-popup">

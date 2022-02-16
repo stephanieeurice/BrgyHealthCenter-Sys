@@ -47,14 +47,14 @@
             <i class="fa fa-th-large"></i> Dashboard
             </a>
           </li>
-          <!-- <li class="nav_item" style="padding: 0 20px">
-            <a href="doctor_message.php" class="nav-link" style="color: #ffffff;">
-            <i class="fa fa-envelope"></i> Messages
-            </a>
-          </li> -->
           <li class="nav_item">
               <a href="doctor_messages.php" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-envelope"></i> Messages
+              </a>
+          </li>
+          <li class="nav_item">
+              <a href="doctor_prescription.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-file-text"></i> Prescriptions
               </a>
           </li>
           <li class="nav_item">

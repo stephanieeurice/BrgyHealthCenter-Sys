@@ -59,6 +59,11 @@
             </a>
           </li>
           <li class="nav_item">
+              <a href="doctor_prescription.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-envelope"></i> Prescriptions
+              </a>
+          </li>
+          <li class="nav_item">
               <a href="doctor_profile.php" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-user"></i> Profile
               </a>

@@ -52,6 +52,11 @@
               <i class="fa fa-envelope"></i> Messages
               </a>
           </li>
+          <li class="nav_item">
+              <a href="doctor_prescription.php" class="nav-link " style="color: #ffffff;">
+              <i class="fa fa-file-text"></i> Prescriptions
+              </a>
+          </li>
           <li class="nav_item active">
               <a href="doctor_profile.php" class="nav-link " style="color: #23467a; font-weight: 700; font-size: 20px;">
               <i class="fa fa-user"></i> Profile

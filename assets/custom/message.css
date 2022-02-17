@@ -193,16 +193,24 @@
   pointer-events: auto;
   border-radius: 0 5px 5px 0;
 }
+.typing-area button .send:hover {
+  background-color: #7cb33d;
+}
 .typing-area .attachment {
   background-color: #d6dce6;
   width: 30px;
   color: #000;
   border: none;
   outline: none;
-  font-size: 19px;
   cursor: pointer;
   opacity: 1;
   pointer-events: auto;
+  align-items: center;
+}
+.typing-area .attachment i {
+  text-align: center;
+  margin: 12px 0 0 8px;
+  font-size: 20px;
 }
 .typing-area .attachment:hover {
   background-color: #b9cbe9;

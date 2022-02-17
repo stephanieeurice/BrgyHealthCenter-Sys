@@ -151,7 +151,7 @@
               <form action="#" class="typing-area">
                 <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
                 <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
-                <button class='attachment' style=""><i class="fa fa-paperclip"></i></button>
+                <div class='attachment'><a style=""><i class="fa fa-paperclip"></i></a></div>
                 <input type="text" name="message" placeholder="Enter message...">
                 <button class="send" style="background: #23467a; color: #ffffff;"><i class="fa fa-paper-plane"></i></button>
               </form>

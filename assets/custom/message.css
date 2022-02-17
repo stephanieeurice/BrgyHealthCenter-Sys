@@ -178,19 +178,32 @@
   width: calc(100% - 58px);
   font-size: 16px;
   padding: 0 13px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #cfcfcf;
   outline: none;
-  border-radius: 5px 0 0 5px;
+  border-radius: 0;
 }
-.typing-area button {
+.typing-area .send {
   color: #fff;
   width: 55px;
   border: none;
   outline: none;
-  background: #333;
   font-size: 19px;
   cursor: pointer;
   opacity: 1;
   pointer-events: auto;
   border-radius: 0 5px 5px 0;
+}
+.typing-area .attachment {
+  background-color: #d6dce6;
+  width: 30px;
+  color: #000;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  cursor: pointer;
+  opacity: 1;
+  pointer-events: auto;
+}
+.typing-area .attachment:hover {
+  background-color: #b9cbe9;
 }

@@ -106,15 +106,15 @@
             </section>
 
             <section class="chat-area" style="background: #f7f7f7;">
-              <header style="display: flex; justify-content: space-between; align-items: flex-end;">
+            <header style="display: flex; justify-content: space-between; align-items: flex-end; padding: 25px 30px 25px 10px;">
                 <div style="display: flex;">
-                  <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
+                  <img class='-1' id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
                   <div class="details">
                     <span><?php echo $row2['name'] ?></span>
                     <p><?php echo $row2['status'] ?></p>
                   </div>
                 </div>
-                <div style="align-self: center; margin-bottom: 5px; margin-left: 500px;">
+                <div style="margin-bottom: 20px;">
                   <input type="checkbox" id="click">
                   <label for="click" id="zoom-btn"><i class="fa fa-video-camera"></i></label>
                   <div class="vc-popup">
@@ -124,7 +124,7 @@
                     </div>
                     <div class="vc-popup-details">
                       <?php
-                        $arr['topic']='Test by Brgy Health Center App';
+                        $arr['topic']='Consultation Meeting';
                         $arr['start_date']=date('2022-02-15 00:07:00');
                         $arr['duration']=30;
                         $arr['password']='zoom-pass';
@@ -132,10 +132,10 @@
                         $result=createMeeting($arr);
                           
                         if(isset($result->id)){
-                          echo "<strong>Join URL: <a href='".$result->join_url."'>".$result->join_url."</a><br/><br/>";
-                          echo "Password: ".$result->password."<br/><br/>";
-                          echo "Start Time: ".$result->start_time."<br/><br/>";
-                          echo "Duration: ".$result->duration." minutes <br/><br/>";
+                          echo "<strong>Join URL</strong>: <a href='".$result->join_url."'>".$result->join_url."</a><br/><br/>";
+                          echo "<strong>Password</strong>: ".$result->password."<br/><br/>";
+                          echo "<strong>Start Time</strong>: ".$result->start_time."<br/><br/>";
+                          echo "<strong>Duration</strong>: ".$result->duration." minutes <br/><br/>";
                         }else{
                           echo '<pre>';
                           print_r($result);

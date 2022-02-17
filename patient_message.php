@@ -2,8 +2,6 @@
   //starts session 
   session_start();
 	include 'includes/db.inc.php';
-  include('zoom-meeting/config.php');
-	include('zoom-meeting/api.php');
 
   //get SESSION userid from LOGGING IN
   $id = $_SESSION["userid"];
@@ -130,7 +128,7 @@
                 </header>
             </section>
             <section class="chat-area" style="background: #f7f7f7;">
-              <header style="display: flex; justify-content: space-between; align-items: flex-end;">
+              <header style="display: flex; justify-content: space-between; align-items: flex-end; padding: 25px 10px;">
                 <div style="display: flex;">
                   <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
                   <div class="details">
@@ -138,36 +136,10 @@
                     <p><?php echo $row2['status'] ?></p>
                   </div>
                 </div>
-                <div style="align-self: center; margin-bottom: 5px; margin-left: 500px;">
+                <!-- <div style="align-self: center; margin-bottom: 5px;">
                   <input type="checkbox" id="click">
                   <label for="click" id="zoom-btn"><i class="fa fa-video-camera"></i></label>
-                  <div class="vc-popup">
-                    <div class="header">
-                      <h3>Zoom Meeting</h3>
-                      <label for="click" class="fa fa-times"></label>
-                    </div>
-                    <div class="vc-popup-details">
-                      <?php
-                        $arr['topic']='Test by Brgy Health Center App';
-                        $arr['start_date']=date('2022-02-15 00:07:00');
-                        $arr['duration']=30;
-                        $arr['password']='zoom-pass';
-                        $arr['type']='2';
-                        $result=createMeeting($arr);
-                          
-                        if(isset($result->id)){
-                          echo "<strong>Join URL: <a href='".$result->join_url."'>".$result->join_url."</a><br/><br/>";
-                          echo "Password: ".$result->password."<br/><br/>";
-                          echo "Start Time: ".$result->start_time."<br/><br/>";
-                          echo "Duration: ".$result->duration." minutes <br/><br/>";
-                        }else{
-                          echo '<pre>';
-                          print_r($result);
-                        }
-                      ?>
-                    </div>
-                  </div>
-                </div>
+                </div> -->
               </header>
               <div class="chat-box">
                 
@@ -176,7 +148,7 @@
                 <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
                 <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
                 <input type="text" name="message" placeholder="Enter message...">
-                <button type="button" class="btn btn-outline-dark"><i class="fa fa-paper-plane"></i></button>
+                <button style="background: #23467a; color: #ffffff;"><i class="fa fa-paper-plane"></i></button>
               </form>
             </section>
           </div>

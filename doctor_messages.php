@@ -102,7 +102,7 @@
               </div>
             </section>
             <section class="chat-area" style="background: #f7f7f7;">
-              <div class="align-middle text-center">
+              <div class="align-middle text-center" style="margin-top: 30%;">
                 No messages available
               </div>
             </section>

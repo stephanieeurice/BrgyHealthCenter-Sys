@@ -114,7 +114,7 @@
                     <p><?php echo $row2['status'] ?></p>
                   </div>
                 </div>
-                <div style="margin-bottom: 20px;">
+                <div style="top: -5px;">
                   <input type="checkbox" id="click">
                   <label for="click" id="zoom-btn"><i class="fa fa-video-camera"></i></label>
                   <div class="vc-popup">
@@ -151,8 +151,9 @@
               <form action="#" class="typing-area">
                 <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
                 <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
+                <button class='attachment' style=""><i class="fa fa-paperclip"></i></button>
                 <input type="text" name="message" placeholder="Enter message...">
-                <button style="background: #23467a; color: #ffffff;"><i class="fa fa-paper-plane"></i></button>
+                <button class="send" style="background: #23467a; color: #ffffff;"><i class="fa fa-paper-plane"></i></button>
               </form>
             </section>
           </div>

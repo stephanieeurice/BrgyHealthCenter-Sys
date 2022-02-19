@@ -3,7 +3,7 @@ session_start();
 include 'includes/db.inc.php';
 
 //Select specific datas for viewing of table, inner join for fetching data from foreign key
-$results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.state_condition, apt.apt_date, apt.apt_time, apt.apt_action FROM appointment apt INNER JOIN patient pt ON apt.patient_id = pt.id");
+$results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.state_condition, apt.apt_date, apt.apt_time, apt.apt_action FROM appointment apt INNER JOIN patient pt ON apt.patient_id = pt.id ORDER BY apt_date, apt_time");
 ?>
 
 <html lang="en">
@@ -101,7 +101,7 @@ $results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.
           <tbody>
             <?php while ($row = mysqli_fetch_array($results)) { ?>
               <?php if ($row['apt_action'] !== 'Deleted') { ?>
-                <tr>
+                <tr class="<?php if ($row['apt_action'] == 'Done') 'bg-success' ?>">
                   <td><?php echo $row['id']; ?></td>
                   <td><?php echo $row['name']; ?></td>
                   <td><?php echo date('Y-m-d', strtotime($row['date_submitted'])); ?></td>
@@ -133,7 +133,7 @@ $results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.
       text: 'Accept, Decline or Delete Appointment.',
       confirmButtonText: 'Cancel',
       html: `
-        <form id="approvalForm" action="includes/appointmentaction.php" method="post">
+        <form id="approvalForm" action="includes/appointmentactionDoctor.php" method="post">
           <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
             <select name="action" id="action" class='btn btn-info m-3' required>
               <option value="" selected disabled hidden>Choose Action</option>

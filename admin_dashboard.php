@@ -3,7 +3,7 @@ session_start();
 include 'includes/db.inc.php';
 
 //Select specific datas for viewing of table, inner join for fetching data from foreign key
-$results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.state_condition, apt.apt_date, apt.apt_time, apt.apt_action FROM appointment apt INNER JOIN patient pt ON apt.patient_id = pt.id");
+$results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.state_condition, apt.apt_date, apt.apt_time, apt.apt_action FROM appointment apt INNER JOIN patient pt ON apt.patient_id = pt.id ORDER BY apt_date, apt_time");
 ?>
 
 <html lang="en">
@@ -93,7 +93,7 @@ $results = mysqli_query($conn, "SELECT apt.id, pt.name, apt.date_submitted, apt.
           </thead>
           <tbody>
             <?php while ($row = mysqli_fetch_array($results)) { ?>
-              <tr class="<?php if ($row['apt_action'] == 'Deleted') echo 'deletedAppointment' ?>" <?php if ($row['apt_action'] == 'Deleted') echo 'style="display: none"' ?>>
+              <tr class="<?php if ($row['apt_action'] == 'Deleted') echo 'deletedAppointment' ?><?php if ($row['apt_action'] == 'Done') 'bg-success' ?>" <?php if ($row['apt_action'] == 'Deleted') echo 'style="display: none"' ?>>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['name']; ?></td>
                 <td><?php echo date('Y-m-d', strtotime($row['date_submitted'])); ?></td>

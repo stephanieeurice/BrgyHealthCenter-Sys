@@ -152,7 +152,7 @@
                 <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden>
                 <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden>
                 <div class='attachment'><a style=""><i class="fa fa-paperclip"></i></a></div>
-                <input type="text" name="message" placeholder="Enter message...">
+                <input type="text" name="message" placeholder="Enter message..." class="input-field">
                 <button class="send" style="background: #23467a; color: #ffffff;"><i class="fa fa-paper-plane"></i></button>
               </form>
             </section>

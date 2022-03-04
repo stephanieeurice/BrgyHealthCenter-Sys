@@ -12,17 +12,21 @@
         $query = mysqli_query($conn, $sql2);
         if(mysqli_num_rows($query) > 0){
             while($row2 = mysqli_fetch_assoc($query)){
+
+                $date = strtotime($row2['date_sent']);
+                $today = date( "F j, Y, g:i A", $date );
+                
                 if($row2['outgoing_msg_id'] === $outgoing_id){
                     $output .= '<div class="chat outgoing">
                                 <div class="details">
-                                    <p>'. $row2['msg'] .'</p>
+                                    <p>><small>'. $today .'</small><br>'. $row2['msg'] .'</p>
                                 </div>
                                 </div>';
                 }else{
                     $output .= '<div class="chat incoming">
                                 <img class="-1" id="avatar" src="assets/images/avatar_female.png" alt="User Avatar" height="55" width="55">
                                 <div class="details">
-                                    <p>'. $row2['msg'] .'</p>
+                                    <p>><small>'. $today .'</small><br>'. $row2['msg'] .'</p>
                                 </div>
                                 </div>';
                 }

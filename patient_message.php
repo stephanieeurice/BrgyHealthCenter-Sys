@@ -87,7 +87,7 @@
           </li>
           <li><hr class="dropdown-divider" style="color: #e1eaf7; height: 2px; margin: 10px"></li>
           <li class="nav_item">
-              <a href="patient_covid_consultation.php" class="nav-link " style="color: #ffffff;">
+              <a href="https://consultation19-react.herokuapp.com/consultation/<?php echo $_SESSION['unique_id']; ?>" target="_blank" class="nav-link " style="color: #ffffff;">
               <i class="fa fa-check-square-o"></i> COVID-19 Consultation
               </a>
           </li>
